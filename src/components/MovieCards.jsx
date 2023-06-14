@@ -1,7 +1,6 @@
 import Movie from "./Movie";
 
-const MovieCards = ({ moviesDataProps }) => {
-	console.log(moviesDataProps);
+const MovieCards = ({ moviesDataProps, deleteMovie }) => {
 	return (
 		<div className="card-container">
 			{moviesDataProps.length === 0 ? (
@@ -9,7 +8,7 @@ const MovieCards = ({ moviesDataProps }) => {
 			) : (
 				<>
 					{moviesDataProps.map((movie, id) => {
-						return <Movie key={id} movie={movie} />;
+						return <Movie key={id} movie={movie} deleteMovie={deleteMovie} />;
 					})}
 				</>
 			)}

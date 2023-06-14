@@ -21,6 +21,7 @@ const App = () => {
 			} catch (error) {
 				console.log(error);
 			}
+			setLoading(false);
 		}
 
 
@@ -28,6 +29,11 @@ const App = () => {
 		fetchMovies();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
+	function deleteMovie(id) {
+		const filteredMovies = movies.filter((movie) => movie.id !== id);
+		return setMovies(filteredMovies);
+	}
 
 	if (loading) {
 		return (
@@ -39,7 +45,7 @@ const App = () => {
 
 	return (
 		<div className="container">
-			<Home moviesDataProps={movies}/>
+			<Home moviesDataProps={movies} deleteMovie={deleteMovie} />
 		</div>
 	);
 };

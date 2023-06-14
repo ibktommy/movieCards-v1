@@ -1,10 +1,10 @@
 import MovieCards from "./MovieCards";
 
-const Home = ({ moviesDataProps }) => {
+const Home = ({ moviesDataProps, deleteMovie }) => {
 	return (
 		<div className="main">
-      <h1 className="header">movies</h1>
-      <MovieCards moviesDataProps={moviesDataProps} />
+			<h1 className="header">movies</h1>
+			<MovieCards moviesDataProps={moviesDataProps} deleteMovie={deleteMovie} />
 		</div>
 	);
 };

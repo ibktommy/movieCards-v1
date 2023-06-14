@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const Movie = ({ movie }) => {
-	const { title, overview, vote_average, poster_path } = movie;
+const Movie = ({ movie, deleteMovie }) => {
+	const { title, overview, vote_average, poster_path, id } = movie;
 	const imageLink = "https://image.tmdb.org/t/p/w500/";
 
 	const [readMore, setReadMore] = useState(false);
@@ -15,7 +15,7 @@ const Movie = ({ movie }) => {
 			<div className="movie-image">
 				<img src={`${imageLink}${poster_path}`} alt={title} />
 				<div className="movie-rating">
-					<i class="fa-solid fa-thumbs-up"></i>
+					<i className="fa-solid fa-thumbs-up"></i>
 					<p>{vote_average}</p>
 				</div>
 			</div>
@@ -39,6 +39,8 @@ const Movie = ({ movie }) => {
 						</span>
 					)}
 				</div>
+
+				<button className="movie-btn" onClick={() => deleteMovie(id)}>not interested</button>
 			</div>
 		</article>
 	);

@@ -79,11 +79,11 @@ body {
 
 .movie-card {
   width: 30%;
-  height: 70rem;
+  min-height: 70rem;
   background-color: #252525;
   box-shadow: rgba(0,0,0,0.4) 5px 5px 5px;
   position: relative;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .movie-image {
@@ -139,7 +139,7 @@ body {
 }
 
 .movie-title span:last-child {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   letter-spacing: .15rem;
 }
 
@@ -154,6 +154,26 @@ body {
   color: goldenrod;
   cursor: pointer;
   font-weight: bold;
+}
+
+.movie-btn {
+  display: inline-block;
+  margin: 3rem 0 1rem 0;
+  width: 100%;
+  background: goldenrod;
+  border: .1rem solid goldenrod;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: .2rem;
+  cursor: pointer;
+}
+
+.movie-btn:hover {
+  background: transparent;
+  color: goldenrod;
+  transition: .4s ease;
 }
 
 
