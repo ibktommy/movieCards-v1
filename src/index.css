@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg') no-repeat center/cover;
   line-height: 1.3;
+  color: #fff;
 }
 
 .container {
@@ -48,6 +49,7 @@ body {
 }
 
 .main .header {
+  font-size: 3rem;
   text-transform: uppercase;
   margin-bottom: 2.5rem;
   padding-bottom: .3rem;
@@ -58,10 +60,89 @@ body {
 }
 
 .card-container {
-  width: 95%;
+  width: 95vw;
   padding: 2rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 3rem;
   background-color: #252525;
   box-shadow: rgba(0,0,0,0.4) 5px 5px 5px;
+}
+
+.card-container h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.movie-card {
+  width: 30%;
+  height: 70rem;
+  background-color: #252525;
+  box-shadow: rgba(0,0,0,0.4) 5px 5px 5px;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.movie-image {
+  width: 100%;
+  height: 70%;
+}
+
+.movie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-rating {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 3.5rem;
+  background: goldenrod;
+   box-shadow: rgba(0,0,0,0.4) 2px 2px 1px;
+}
+
+.movie-rating p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.movie-rating i {
+  font-size: 2rem;
+   margin-right: 1rem;
+}
+
+.movie-brief {
+  padding: 1rem;
+  border-left: .1rem solid #fff;
+}
+
+.movie-title {
+  margin-bottom: 1rem;
+}
+
+.movie-title span:first-child,
+.movie-brief-text span:first-child {
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: .2rem solid #fff;
+  padding-bottom: .2rem;
+  margin-right: .7rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.movie-title span:last-child {
+  font-size: 1.8rem;
+  letter-spacing: .15rem;
+}
+.movie-brief-text span:last-child {
+  font-size: 1.4rem;
+  letter-spacing: .1rem;
 }

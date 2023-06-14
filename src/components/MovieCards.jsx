@@ -8,8 +8,8 @@ const MovieCards = ({ moviesDataProps }) => {
 				<h1>No movies to display</h1>
 			) : (
 				<>
-					{moviesDataProps.map((movie) => {
-						return <Movie />;
+					{moviesDataProps.map((movie, id) => {
+						return <Movie key={id} movie={movie} />;
 					})}
 				</>
 			)}
