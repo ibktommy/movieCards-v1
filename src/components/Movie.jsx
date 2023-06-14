@@ -29,7 +29,7 @@ const Movie = ({ movie, deleteMovie }) => {
 					<span>Overview: </span>
 					{!readMore ? (
 						<span>
-							{overview.substring(1, 150)}
+							{overview.substring(0, 150)}
 							<button onClick={toggleReadMore}>...read more</button>
 						</span>
 					) : (
@@ -40,7 +40,9 @@ const Movie = ({ movie, deleteMovie }) => {
 					)}
 				</div>
 
-				<button className="movie-btn" onClick={() => deleteMovie(id)}>not interested</button>
+				<button className="movie-btn" onClick={() => deleteMovie(id)}>
+					not interested
+				</button>
 			</div>
 		</article>
 	);
