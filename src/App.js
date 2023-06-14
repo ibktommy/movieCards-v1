@@ -1,6 +1,11 @@
+import Home from "./components/Home";
 
 const App = () => {
-  return <div>MovieListingFetch-v1</div>;
+  return (
+    <div className="container">
+      <Home />
+    </div>
+  );
 }
 
 export default App
