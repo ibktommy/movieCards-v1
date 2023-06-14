@@ -30,12 +30,12 @@ const Movie = ({ movie }) => {
 					{!readMore ? (
 						<span>
 							{overview.substring(1, 150)}
-							<button onClick={toggleReadMore}> ...read more</button>
+							<button onClick={toggleReadMore}>...read more</button>
 						</span>
 					) : (
 						<span>
 							{overview}
-							<button onClick={toggleReadMore}> ...read less</button>
+							<button onClick={toggleReadMore}>...read less</button>
 						</span>
 					)}
 				</div>
