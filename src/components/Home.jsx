@@ -1,10 +1,10 @@
-import MovieCard from './MovieCard'
+import MovieCards from "./MovieCards";
 
-const Home = () => {
+const Home = ({ moviesDataProps }) => {
 	return (
 		<div className="main">
-			<h1 className="header">movies</h1>
-      <MovieCard/>
+      <h1 className="header">movies</h1>
+      <MovieCards moviesDataProps={moviesDataProps} />
 		</div>
 	);
 };
