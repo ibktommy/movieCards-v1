@@ -1,6 +1,14 @@
+import { useState } from "react";
+
 const Movie = ({ movie }) => {
 	const { title, overview, vote_average, poster_path } = movie;
 	const imageLink = "https://image.tmdb.org/t/p/w500/";
+
+	const [readMore, setReadMore] = useState(false);
+
+	function toggleReadMore() {
+		setReadMore(!readMore);
+	}
 
 	return (
 		<article className="movie-card">
@@ -19,7 +27,17 @@ const Movie = ({ movie }) => {
 				</div>
 				<div className="movie-brief-text">
 					<span>Overview: </span>
-					<span>{overview}</span>
+					{!readMore ? (
+						<span>
+							{overview.substring(1, 150)}
+							<button onClick={toggleReadMore}> ...read more</button>
+						</span>
+					) : (
+						<span>
+							{overview}
+							<button onClick={toggleReadMore}> ...read less</button>
+						</span>
+					)}
 				</div>
 			</div>
 		</article>

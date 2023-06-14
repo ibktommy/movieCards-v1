@@ -142,7 +142,16 @@ body {
   font-size: 1.8rem;
   letter-spacing: .15rem;
 }
+
 .movie-brief-text span:last-child {
   font-size: 1.4rem;
   letter-spacing: .1rem;
+}
+
+.movie-brief-text span:last-child button {
+  background: none;
+  border: none;
+  color: goldenrod;
+  cursor: pointer;
+  font-weight: bold;
 }
